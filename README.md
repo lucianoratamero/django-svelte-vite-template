@@ -1,48 +1,21 @@
-# Svelte + Vite
+# django-svelte-vite-template
 
-This template should help get you started developing with Svelte in Vite.
+This project is a sample on how to integrate django, vite and svelte into one, all-powerful megazord.
 
-## Recommended IDE Setup
+Please take your time to read [this gist](https://gist.github.com/lucianoratamero/7fc9737d24229ea9219f0987272896a2) or [this video](https://www.youtube.com/watch?v=FCyYIVfDkhY) to understand how things are working, and how to reconfigure everything to your needs. :]
 
-[VSCode](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+As usual, this is more of a proof of concept than a proper boilerplate, so be free to add issues, so we can learn more together!
 
-## Need an official Svelte framework?
+## Installing
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+This project uses [poetry](https://python-poetry.org/) to manage the python dependencies. So, first, install poetry, then clone this repo, create a virtualenv for it, and install the dependencies with `poetry install`.
 
-## Technical considerations
+After that, you'll need run `npm install`, to install the node dependencies.
 
-**Why use this over SvelteKit?**
+With all done, migrate the database and run `npm run dev`. This npm script will run both servers in parallel, giving you a straightforward dev server (on :8000 by default).
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
+## Contributing / Code of Conduct
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-app` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+I'd love to know more about your specific use cases, or better solutions for the problem, so be free to open issues and discuss on the ones that are open!
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+The only thing that I ask is for you to be mindful of others. That means non-agressive communication. That means no racism, homophobia, etc. Please, and thank you :]
