@@ -14,6 +14,7 @@
     "prettier": "^2.3.2",
     "prettier-plugin-svelte": "^2.3.1",
     "svelte": "^3.37.0",
+    "tinro": "^0.6.4",
     "vite": "^2.3.8"
   }
 }
